@@ -1,0 +1,23 @@
+{
+  "automerge": true,
+  "automergeStrategy": "rebase",
+  "extends": ["config:recommended"],
+  "schedule": ["every weekend"],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"]
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Security updates - auto merge immediately",
+      "isVulnerabilityAlert": true,
+      "schedule": ["at any time"],
+      "automerge": true,
+      "prPriority": 10
+    }
+  ]
+}

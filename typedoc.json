@@ -1,0 +1,8 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "api-docs",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "includeVersion": true,
+  "plugin": ["typedoc-plugin-markdown"]
+}
