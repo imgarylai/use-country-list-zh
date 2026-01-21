@@ -11,9 +11,7 @@ import type {
 /**
  * Compare function for sorting countries
  */
-function getSortComparator(
-  sortBy: SortBy
-): (a: Country, b: Country) => number {
+function getSortComparator(sortBy: SortBy): (a: Country, b: Country) => number {
   switch (sortBy) {
     case "en":
       // Sort by English name alphabetically
@@ -189,7 +187,7 @@ export function useCountryList(
   const reset = useCallback((): void => {
     setQuery("");
     setSelectedCountryState(
-      defaultSelected ? countryMap.get(defaultSelected) ?? null : null
+      defaultSelected ? (countryMap.get(defaultSelected) ?? null) : null
     );
   }, [defaultSelected]);
 

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   branches: [
     "main",
     {
@@ -21,7 +21,8 @@ export default {
       "@semantic-release/git",
       {
         assets: ["docs/CHANGELOG.md", "package.json", "package-lock.json"],
-        message: "chore(release): ${nextRelease.version} [skip ci]",
+        message:
+          "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
   ],

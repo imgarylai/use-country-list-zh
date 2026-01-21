@@ -1,64 +1,100 @@
-import js from "@eslint/js";
-import tsPlugin from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import reactPlugin from "eslint-plugin-react";
-import reactHooksPlugin from "eslint-plugin-react-hooks";
-import prettier from "eslint-plugin-prettier";
+const js = require('@eslint/js');
+const typescript = require('@typescript-eslint/eslint-plugin');
+const typescriptParser = require('@typescript-eslint/parser');
+const react = require('eslint-plugin-react');
+const reactHooks = require('eslint-plugin-react-hooks');
 
-export default [
+module.exports = [
+  // Global ignores
   {
-    ignores: ["dist/**", "node_modules/**", "coverage/**", "*.config.js"],
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'coverage/**',
+      'eslint.config.js',
+      'vite.config.ts',
+      '.commitlintrc.js',
+      '.releaserc.js',
+      'jest.config.js',
+    ],
   },
-  js.configs.recommended,
+  // Configuration for source files
   {
-    files: ["**/*.{ts,tsx,mtsx}"],
-    plugins: {
-      "@typescript-eslint": tsPlugin,
-      react: reactPlugin,
-      "react-hooks": reactHooksPlugin,
-      prettier: prettier,
-    },
+    files: ['src/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: tsParser,
+      parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
       },
       globals: {
-        console: "readonly",
-        process: "readonly",
+        console: 'readonly',
+        process: 'readonly',
       },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
     },
     settings: {
       react: {
-        version: "detect",
+        version: 'detect',
       },
     },
-    rules: {
-      ...tsPlugin.configs.recommended.rules,
-      ...reactPlugin.configs.recommended.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
-      "@typescript-eslint/explicit-function-return-type": "warn",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_" },
-      ],
-      "@typescript-eslint/no-explicit-any": "warn",
-      "no-console": ["warn", { allow: ["warn", "error"] }],
-      "prettier/prettier": "error",
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-    },
   },
+  // Configuration for test files
   {
-    files: ["tests/**/*.{ts,tsx}"],
+    files: ['tests/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        test: 'readonly',
+        expect: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
+    },
     rules: {
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-non-null-assertion": "off",
+      ...js.configs.recommended.rules,
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
 ];

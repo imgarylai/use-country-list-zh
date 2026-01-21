@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh run view:*)",
+      "Bash(npx prettier:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run test:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: resolve ESLint and Prettier issues\n\n- Fix Prettier formatting in countries.ts and useCountryList.ts\n- Add Jest globals to ESLint config for test files\n- Fix __dirname usage in vite.config.ts for ESM compatibility\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh run list:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh run rerun:*)",
+      "Bash(gh secret set:*)",
+      "WebFetch(domain:github.blog)",
+      "WebFetch(domain:docs.npmjs.com)",
+      "WebSearch",
+      "Bash(git rm:*)"
+    ]
+  }
+}
