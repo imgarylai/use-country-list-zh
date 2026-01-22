@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.0...v1.1.1) (2026-01-22)
+
+### Bug Fixes
+
+- ci ([38a9647](https://github.com/imgarylai/use-country-list-zh/commit/38a9647c517cd292707347e4c9622f03166a479f))
+
 # [1.1.0](https://github.com/imgarylai/use-country-list-zh/compare/v1.0.0...v1.1.0) (2026-01-22)
 
 ### Features
