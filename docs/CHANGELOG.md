@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.1...v1.1.2) (2026-01-22)
+
+### Bug Fixes
+
+- use npm package in demo and separate CI triggers ([572456a](https://github.com/imgarylai/use-country-list-zh/commit/572456af856b7f3880db3ec00399128fa7dcc8f9))
+
 ## [1.1.1](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.0...v1.1.1) (2026-01-22)
 
 ### Bug Fixes
