@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.2...v1.1.3) (2026-01-22)
+
+### Bug Fixes
+
+- regenerate demo package-lock.json and remove docs step from CI ([ac5c73b](https://github.com/imgarylai/use-country-list-zh/commit/ac5c73b5783521aef74bbb4c4ce1887913839c30))
+
 ## [1.1.2](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.1...v1.1.2) (2026-01-22)
 
 ### Bug Fixes
