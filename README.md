@@ -5,6 +5,8 @@
 
 一個提供中文國家選擇器的 React Hook，支援英文輸入快速過濾功能。
 
+**[Live Demo](https://use-country-list-zh.vercel.app/)**
+
 ## 問題背景
 
 在台灣，許多網站的國家下拉選單使用中文顯示。不像英文選單可以按下 "U" 快速跳到以 "U" 開頭的國家，中文選單無法使用鍵盤快速導航，使得選擇國家變得緩慢且繁瑣。
@@ -52,17 +54,11 @@ pnpm add use-country-list-zh
 ### 基本範例
 
 ```tsx
-import { useCountryList } from "use-country-list-zh";
+import { useCountryList } from 'use-country-list-zh';
 
 function CountrySelect() {
-  const {
-    countries,
-    query,
-    setQuery,
-    selectedCountry,
-    setSelectedCountry,
-    getDisplayText,
-  } = useCountryList();
+  const { countries, query, setQuery, selectedCountry, setSelectedCountry, getDisplayText } =
+    useCountryList();
 
   return (
     <div>
@@ -92,10 +88,10 @@ function CountrySelect() {
 ```tsx
 const { countries } = useCountryList({
   showFlag: true, // 顯示國旗 emoji（預設：true）
-  topList: ["TW", "US", "JP"], // 常用國家置頂
-  includeOnly: ["TW", "US", "JP", "KR", "CN"], // 只顯示這些國家
-  defaultSelected: "TW", // 預設選擇台灣
-  sortBy: "en", // 排序方式（選項：'zh'、'en'、'zhuyin'）
+  topList: ['TW', 'US', 'JP'], // 常用國家置頂
+  includeOnly: ['TW', 'US', 'JP', 'KR', 'CN'], // 只顯示這些國家
+  defaultSelected: 'TW', // 預設選擇台灣
+  sortBy: 'en', // 排序方式（選項：'zh'、'en'、'zhuyin'）
 });
 ```
 
@@ -103,22 +99,21 @@ const { countries } = useCountryList({
 
 ```tsx
 function ShippingCountrySelect() {
-  const { countries, query, setQuery, selectedCountry, setSelectedCountry } =
-    useCountryList({
-      topList: ["TW", "JP", "US", "KR", "CN"], // 常見配送目的地
-      showFlag: true,
-      defaultSelected: "TW",
-    });
+  const { countries, query, setQuery, selectedCountry, setSelectedCountry } = useCountryList({
+    topList: ['TW', 'JP', 'US', 'KR', 'CN'], // 常見配送目的地
+    showFlag: true,
+    defaultSelected: 'TW',
+  });
 
   return (
     <select
-      value={selectedCountry?.code || ""}
+      value={selectedCountry?.code || ''}
       onChange={(e) => setSelectedCountry(e.target.value)}
     >
       <option value="">請選擇國家</option>
       {countries.map((country) => (
         <option key={country.code} value={country.code}>
-          {country.isTop && "★ "}
+          {country.isTop && '★ '}
           {country.flag} {country.nameZh}
         </option>
       ))}
@@ -126,6 +121,184 @@ function ShippingCountrySelect() {
   );
 }
 ```
+
+## UI 框架範例
+
+### Ant Design
+
+```tsx
+import { Select } from 'antd';
+import { useCountryList } from 'use-country-list-zh';
+
+function AntdCountrySelect() {
+  const { countries, query, setQuery, selectedCountry, setSelectedCountry, getDisplayText } =
+    useCountryList({
+      showFlag: true,
+      topList: ['TW', 'US', 'JP'],
+    });
+
+  return (
+    <Select
+      showSearch
+      style={{ width: 280 }}
+      placeholder="輸入英文搜尋..."
+      value={selectedCountry?.code}
+      onChange={(value) => {
+        setSelectedCountry(value);
+        setQuery('');
+      }}
+      searchValue={query}
+      onSearch={setQuery}
+      options={countries.map((country) => ({
+        value: country.code,
+        label: getDisplayText(country),
+      }))}
+      filterOption={false}
+    />
+  );
+}
+```
+
+### MUI (Material UI)
+
+```tsx
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { useCountryList } from 'use-country-list-zh';
+
+function MuiCountrySelect() {
+  const { countries, selectedCountry, setSelectedCountry, getDisplayText } = useCountryList({
+    showFlag: true,
+  });
+
+  return (
+    <FormControl sx={{ minWidth: 280 }}>
+      <InputLabel>國家</InputLabel>
+      <Select
+        value={selectedCountry?.code || ''}
+        label="國家"
+        onChange={(e) => setSelectedCountry(e.target.value)}
+      >
+        {countries.map((country) => (
+          <MenuItem key={country.code} value={country.code}>
+            {getDisplayText(country)}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
+  );
+}
+```
+
+### shadcn/ui (Combobox)
+
+```tsx
+import { Check, ChevronsUpDown } from 'lucide-react';
+import { useCountryList } from 'use-country-list-zh';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from '@/components/ui/command';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+
+function CountryCombobox() {
+  const [open, setOpen] = React.useState(false);
+  const { countries, query, setQuery, selectedCountry, setSelectedCountry, getDisplayText } =
+    useCountryList({ showFlag: true });
+
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button variant="outline" className="w-[280px] justify-between">
+          {selectedCountry ? getDisplayText(selectedCountry) : '選擇國家...'}
+          <ChevronsUpDown className="ml-2 h-4 w-4 opacity-50" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[280px] p-0">
+        <Command shouldFilter={false}>
+          <CommandInput placeholder="輸入英文搜尋..." value={query} onValueChange={setQuery} />
+          <CommandList>
+            <CommandEmpty>找不到國家</CommandEmpty>
+            <CommandGroup>
+              {countries.map((country) => (
+                <CommandItem
+                  key={country.code}
+                  onSelect={() => {
+                    setSelectedCountry(country);
+                    setQuery('');
+                    setOpen(false);
+                  }}
+                >
+                  <Check
+                    className={cn(
+                      'mr-2 h-4 w-4',
+                      selectedCountry?.code === country.code ? 'opacity-100' : 'opacity-0',
+                    )}
+                  />
+                  {getDisplayText(country)}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+```
+
+### React Hook Form
+
+```tsx
+import { Controller, useForm } from 'react-hook-form';
+import { useCountryList } from 'use-country-list-zh';
+
+interface FormData {
+  country: string;
+}
+
+function CountryForm() {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+  const { countries, getDisplayText } = useCountryList({ showFlag: true });
+
+  const onSubmit = (data: FormData) => {
+    console.log('Selected country:', data.country);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Controller
+        name="country"
+        control={control}
+        rules={{ required: '請選擇國家' }}
+        render={({ field }) => (
+          <select {...field}>
+            <option value="">請選擇國家</option>
+            {countries.map((country) => (
+              <option key={country.code} value={country.code}>
+                {getDisplayText(country)}
+              </option>
+            ))}
+          </select>
+        )}
+      />
+      {errors.country && <span>{errors.country.message}</span>}
+      <button type="submit">送出</button>
+    </form>
+  );
+}
+```
+
+更多範例請參考 [Live Demo](https://use-country-list-zh.vercel.app/)。
 
 ## API
 
@@ -145,13 +318,13 @@ function ShippingCountrySelect() {
 
 ### 選項
 
-| 選項              | 類型       | 預設值 | 說明                                     |
-| ----------------- | ---------- | ------ | ---------------------------------------- |
-| `showFlag`        | `boolean`  | `true` | 在顯示文字中包含國旗 emoji               |
-| `topList`         | `string[]` | `[]`   | 要置頂的國家代碼                         |
-| `includeOnly`     | `string[]` | -      | 只顯示這些國家                           |
-| `defaultSelected` | `string`   | -      | 預設選擇的國家代碼                       |
-| `sortBy`          | `SortBy`   | `'zh'` | 排序方式：`'zh'`、`'en'`、`'zhuyin'`     |
+| 選項              | 類型       | 預設值 | 說明                                 |
+| ----------------- | ---------- | ------ | ------------------------------------ |
+| `showFlag`        | `boolean`  | `true` | 在顯示文字中包含國旗 emoji           |
+| `topList`         | `string[]` | `[]`   | 要置頂的國家代碼                     |
+| `includeOnly`     | `string[]` | -      | 只顯示這些國家                       |
+| `defaultSelected` | `string`   | -      | 預設選擇的國家代碼                   |
+| `sortBy`          | `SortBy`   | `'zh'` | 排序方式：`'zh'`、`'en'`、`'zhuyin'` |
 
 ### 類型定義
 
@@ -167,7 +340,7 @@ interface CountryItem extends Country {
   isTop?: boolean; // 是否在置頂列表中
 }
 
-type SortBy = "zh" | "en" | "zhuyin";
+type SortBy = 'zh' | 'en' | 'zhuyin';
 ```
 
 ## 排序選項
