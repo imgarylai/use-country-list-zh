@@ -29,7 +29,7 @@
     "commit": "git-cz",
     "dev": "vite build --watch",
     "lint": "eslint .",
-    "prepare": "husky",
+    "prepare": "husky || true",
     "semantic-release": "semantic-release",
     "test": "jest",
     "test:coverage": "jest --coverage",

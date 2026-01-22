@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Home, Github, Palette, Layers, Layout } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "首頁" },
-  { href: "/shadcn", label: "Shadcn/ui" },
-  { href: "/mui", label: "Material UI" },
-  { href: "/antd", label: "Ant Design" },
+  { href: "/", label: "首頁", icon: Home },
+  { href: "/shadcn", label: "Shadcn/ui", icon: Palette },
+  { href: "/mui", label: "Material UI", icon: Layers },
+  { href: "/antd", label: "Ant Design", icon: Layout },
 ];
 
 export function Navigation() {
@@ -29,12 +30,13 @@ export function Navigation() {
               key={item.href}
               href={item.href}
               className={cn(
-                "transition-colors hover:text-foreground/80",
+                "flex items-center gap-1.5 transition-colors hover:text-foreground/80",
                 pathname === item.href
                   ? "text-foreground font-medium"
                   : "text-foreground/60"
               )}
             >
+              <item.icon className="h-4 w-4" />
               {item.label}
             </Link>
           ))}
@@ -44,8 +46,9 @@ export function Navigation() {
             href="https://github.com/imgarylai/use-country-list-zh"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-foreground/60 hover:text-foreground/80"
+            className="flex items-center gap-1.5 text-foreground/60 hover:text-foreground/80"
           >
+            <Github className="h-4 w-4" />
             GitHub
           </a>
         </div>
