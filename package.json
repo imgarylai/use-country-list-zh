@@ -1,6 +1,6 @@
 {
   "name": "use-country-list-zh",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A React hook for Chinese country selector with English input filtering support",
   "license": "MIT",
   "author": "Gary Lai",
