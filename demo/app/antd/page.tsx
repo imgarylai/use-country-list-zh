@@ -19,72 +19,71 @@ export default function AntdPage() {
     <AntdRegistry>
       <div className="container mx-auto px-4 py-12">
         <div className="mx-auto max-w-4xl">
-          <h1 className="text-3xl font-bold">Ant Design Demos</h1>
+          <h1 className="text-3xl font-bold">Ant Design 範例</h1>
           <p className="mt-2 text-muted-foreground">
-            Examples using Ant Design components, popular in enterprise React
-            applications.
+            使用 Ant Design 元件的範例，廣泛應用於企業級 React 應用程式。
           </p>
 
           <div className="mt-12 space-y-16">
             <DemoSection
-              title="Basic Select"
-              description="A simple country dropdown using Ant Design Select."
+              title="基本下拉選單"
+              description="使用 Ant Design Select 的簡單國家下拉選單。"
             >
               <BasicAntdSelect />
             </DemoSection>
 
             <DemoSection
-              title="Select with Top List"
-              description="Popular countries grouped at the top."
+              title="常用國家置頂"
+              description="常用國家分組顯示在頂部。"
             >
               <SelectWithTopList />
             </DemoSection>
 
             <DemoSection
-              title="Searchable Select"
-              description='The main feature! Type in English to filter Chinese country names. Try typing "united" to find United States (美國) and United Kingdom (英國).'
+              title="可搜尋下拉選單"
+              description="核心功能！輸入英文即可篩選中文國家名稱。試著輸入「united」來找到美國和英國。"
             >
               <SearchableSelect />
             </DemoSection>
 
             <DemoSection
-              title="AutoComplete"
-              description="Alternative searchable component using Ant Design AutoComplete."
+              title="自動完成"
+              description="使用 Ant Design AutoComplete 的另一種可搜尋元件。"
             >
               <BasicAutoComplete />
             </DemoSection>
 
             <DemoSection
-              title="Sort Options"
-              description="Switch between Chinese stroke order, English alphabetical, and Zhuyin sorting."
+              title="排序選項"
+              description="可切換筆畫順序、英文字母順序或注音順序排序。"
             >
               <SelectWithSortOptions />
             </DemoSection>
 
             <DemoSection
-              title="Flag Toggle"
-              description="Toggle flag emoji visibility."
+              title="國旗開關"
+              description="切換國旗表情符號的顯示與隱藏。"
             >
               <SelectWithFlagToggle />
             </DemoSection>
 
             <DemoSection
-              title="Country Whitelist"
-              description="Limit the list to specific countries only (e.g., Asian countries)."
+              title="國家白名單"
+              description="限制只顯示特定國家（例如：亞洲國家）。"
             >
               <SelectWithWhitelist />
             </DemoSection>
 
             <DemoSection
-              title="AutoComplete with Whitelist"
-              description="AutoComplete component with country whitelist."
+              title="自動完成加白名單"
+              description="結合白名單功能的自動完成元件。"
             >
               <AutoCompleteWithWhitelist />
             </DemoSection>
           </div>
 
           <div className="mt-16 rounded-lg border bg-muted/50 p-6">
-            <h2 className="text-xl font-semibold mb-4">Code Example</h2>
+            <h2 className="text-xl font-semibold mb-4">程式碼範例</h2>
             <pre className="overflow-x-auto text-sm">
               <code>{`import { useCountryList } from 'use-country-list-zh';
 import { Select } from 'antd';

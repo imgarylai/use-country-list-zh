@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "首頁" },
   { href: "/shadcn", label: "Shadcn/ui" },
   { href: "/mui", label: "Material UI" },
   { href: "/antd", label: "Ant Design" },

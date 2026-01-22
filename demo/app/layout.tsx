@@ -3,9 +3,9 @@ import { Navigation } from "@/components/navigation";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "use-country-list-zh Demo",
+  title: "use-country-list-zh 範例",
   description:
-    "Demo website showcasing the use-country-list-zh React hook library",
+    "use-country-list-zh React Hook 函式庫範例網站",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <footer className="border-t py-6 text-center text-sm text-muted-foreground">
             <p>
-              Built with{" "}
+              使用{" "}
               <a
                 href="https://github.com/imgarylai/use-country-list-zh"
                 className="font-medium underline underline-offset-4"
@@ -30,6 +30,7 @@ export default function RootLayout({
               >
                 use-country-list-zh
               </a>
+              {" "}建置
             </p>
           </footer>
         </div>

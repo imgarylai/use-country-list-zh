@@ -9,14 +9,13 @@ export default function HomePage() {
           use-country-list-zh
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">
-          A React hook library that provides a Chinese country selector with
-          English input filtering support. Perfect for Taiwanese applications
-          where users need to quickly find countries in a Chinese dropdown menu.
+          一個 React Hook 函式庫，提供中文國家選擇器並支援英文輸入篩選。
+          專為台灣應用程式設計，讓使用者能在中文下拉選單中快速找到國家。
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <Button asChild size="lg">
-            <Link href="/shadcn">View Demos</Link>
+            <Link href="/shadcn">查看範例</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
             <a
@@ -31,50 +30,50 @@ export default function HomePage() {
       </div>
 
       <div className="mx-auto mt-16 max-w-4xl">
-        <h2 className="text-2xl font-semibold mb-6">Core Features</h2>
+        <h2 className="text-2xl font-semibold mb-6">核心功能</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           <FeatureCard
-            title="Chinese Display with English Filtering"
-            description='Display country names in Chinese, but allow English input to filter results. Type "united" to find 美國 and 英國.'
+            title="中文顯示、英文篩選"
+            description="以中文顯示國家名稱，但支援英文輸入篩選。輸入「united」即可找到美國和英國。"
           />
           <FeatureCard
-            title="Optional Flag Emoji"
-            description="Support showing or hiding country flag emojis based on your UI needs."
+            title="可選國旗表情符號"
+            description="根據您的介面需求，支援顯示或隱藏國旗表情符號。"
           />
           <FeatureCard
-            title="Top List Support"
-            description="Pin frequently used countries (like Taiwan, USA, Japan) to the top of the list."
+            title="常用國家置頂"
+            description="將常用國家（如台灣、美國、日本）固定在列表頂部。"
           />
           <FeatureCard
-            title="Multiple Sorting Options"
-            description="Sort countries by Chinese stroke order, English alphabetical order, or Zhuyin order."
+            title="多種排序選項"
+            description="支援依筆畫順序、英文字母順序或注音順序排序。"
           />
         </div>
       </div>
 
       <div className="mx-auto mt-16 max-w-4xl">
-        <h2 className="text-2xl font-semibold mb-6">Demo Pages</h2>
+        <h2 className="text-2xl font-semibold mb-6">範例頁面</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <DemoCard
             href="/shadcn"
             title="Shadcn/ui"
-            description="Modern React components built with Radix UI and Tailwind CSS"
+            description="使用 Radix UI 和 Tailwind CSS 建置的現代 React 元件"
           />
           <DemoCard
             href="/mui"
             title="Material UI"
-            description="Google's Material Design components for React"
+            description="Google Material Design 的 React 元件庫"
           />
           <DemoCard
             href="/antd"
             title="Ant Design"
-            description="Enterprise-class UI design language and React components"
+            description="企業級 UI 設計語言與 React 元件庫"
           />
         </div>
       </div>
 
       <div className="mx-auto mt-16 max-w-4xl">
-        <h2 className="text-2xl font-semibold mb-6">Quick Start</h2>
+        <h2 className="text-2xl font-semibold mb-6">快速開始</h2>
         <div className="rounded-lg border bg-muted/50 p-6">
           <pre className="overflow-x-auto text-sm">
             <code>{`npm install use-country-list-zh

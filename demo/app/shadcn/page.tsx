@@ -12,58 +12,57 @@ export default function ShadcnPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-3xl font-bold">Shadcn/ui Demos</h1>
+        <h1 className="text-3xl font-bold">Shadcn/ui 範例</h1>
         <p className="mt-2 text-muted-foreground">
-          Examples using Shadcn/ui components with Radix UI primitives and
-          Tailwind CSS.
+          使用 Shadcn/ui 元件搭配 Radix UI 基礎元件與 Tailwind CSS 的範例。
         </p>
 
         <div className="mt-12 space-y-16">
           <DemoSection
-            title="Basic Select"
-            description="A simple country dropdown using Radix Select. Note: This doesn't support filtering - use the Combobox for that."
+            title="基本下拉選單"
+            description="使用 Radix Select 的簡單國家下拉選單。注意：此元件不支援篩選功能，如需篩選請使用 Combobox。"
           >
             <BasicSelect />
           </DemoSection>
 
           <DemoSection
-            title="Select with Top List"
-            description="Popular countries pinned to the top with a separator."
+            title="常用國家置頂"
+            description="常用國家固定在頂部，並以分隔線區隔。"
           >
             <SelectWithTopList />
           </DemoSection>
 
           <DemoSection
-            title="Searchable Combobox"
-            description='The main feature! Type in English to filter Chinese country names. Try typing "united" to find United States (美國) and United Kingdom (英國).'
+            title="可搜尋下拉選單"
+            description="核心功能！輸入英文即可篩選中文國家名稱。試著輸入「united」來找到美國和英國。"
           >
             <CountryCombobox />
           </DemoSection>
 
           <DemoSection
-            title="Sort Options"
-            description="Switch between Chinese stroke order, English alphabetical, and Zhuyin sorting."
+            title="排序選項"
+            description="可切換筆畫順序、英文字母順序或注音順序排序。"
           >
             <SortOptionsDemo />
           </DemoSection>
 
           <DemoSection
-            title="Flag Toggle"
-            description="Toggle flag emoji visibility."
+            title="國旗開關"
+            description="切換國旗表情符號的顯示與隱藏。"
           >
             <FlagToggleDemo />
           </DemoSection>
 
           <DemoSection
-            title="Country Whitelist"
-            description="Limit the list to specific countries only (e.g., Asian countries)."
+            title="國家白名單"
+            description="限制只顯示特定國家（例如：亞洲國家）。"
           >
             <WhitelistDemo />
           </DemoSection>
         </div>
 
         <div className="mt-16 rounded-lg border bg-muted/50 p-6">
-          <h2 className="text-xl font-semibold mb-4">Code Example</h2>
+          <h2 className="text-xl font-semibold mb-4">程式碼範例</h2>
           <pre className="overflow-x-auto text-sm">
             <code>{`import { useCountryList } from 'use-country-list-zh';
 import { Command, CommandInput, CommandList, CommandItem } from '@/components/ui/command';
