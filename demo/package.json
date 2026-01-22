@@ -26,7 +26,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.1",
-    "use-country-list-zh": "file:.."
+    "use-country-list-zh": "^1.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
