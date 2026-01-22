@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/use-country-list-zh)](https://www.npmjs.com/package/use-country-list-zh)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![codecov](https://codecov.io/gh/imgarylai/use-country-list-zh/graph/badge.svg?token=N6i7vdGfik)](https://codecov.io/gh/imgarylai/use-country-list-zh)
 
 一個提供中文國家選擇器的 React Hook，支援英文輸入快速過濾功能。
 
