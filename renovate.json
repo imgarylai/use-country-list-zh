@@ -1,8 +1,11 @@
 {
-  "automerge": true,
-  "automergeStrategy": "rebase",
-  "extends": ["config:recommended"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits"
+  ],
   "schedule": ["every weekend"],
+  "automergeStrategy": "rebase",
   "vulnerabilityAlerts": {
     "enabled": true,
     "schedule": ["at any time"]
@@ -10,10 +13,14 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "devDependencies (non-major)",
+      "groupSlug": "dev-minor-patch",
       "automerge": true
     },
     {
       "description": "Security updates - auto merge immediately",
+      "matchPackageNames": ["*"],
       "isVulnerabilityAlert": true,
       "schedule": ["at any time"],
       "automerge": true,
