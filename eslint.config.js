@@ -16,6 +16,7 @@ module.exports = [
       '.commitlintrc.js',
       '.releaserc.js',
       'jest.config.js',
+      'demo/**',
     ],
   },
   // Configuration for source files
