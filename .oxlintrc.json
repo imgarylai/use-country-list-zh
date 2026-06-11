@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "react", "jest", "jsx-a11y"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "jest/no-conditional-expect": "off"
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": ["node_modules/**", "dist/**", "coverage/**", "demo/**"]
+}
