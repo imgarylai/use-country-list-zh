@@ -10,6 +10,7 @@ export default defineConfig({
       insertTypesEntry: true,
       include: ['src/**/*'],
       exclude: ['tests/**/*', '**/*.test.*'],
+      tsconfigPath: './tsconfig.build.json',
     }),
   ],
 
