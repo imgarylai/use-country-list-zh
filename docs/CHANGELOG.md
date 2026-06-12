@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.4...v1.1.5) (2026-06-12)
+
+### Bug Fixes
+
+- correct types export path in package.json ([e5c74e4](https://github.com/imgarylai/use-country-list-zh/commit/e5c74e4db247d6fd11f6a078e2d6319cdfc5727e))
+- **deps:** update dependencies (non-major) ([4a7f16e](https://github.com/imgarylai/use-country-list-zh/commit/4a7f16e76d0f6b42191435592b4ac6dd9de7a265))
+
 ## [1.1.4](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.3...v1.1.4) (2026-06-12)
 
 ### Bug Fixes
