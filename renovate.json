@@ -2,14 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    ":semanticCommits"
+    ":semanticCommits",
+    ":enableVulnerabilityAlerts",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests"
   ],
+  "dependencyDashboard": true,
   "schedule": ["every weekend"],
   "automergeStrategy": "rebase",
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "schedule": ["at any time"]
-  },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
