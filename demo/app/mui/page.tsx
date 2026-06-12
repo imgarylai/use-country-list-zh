@@ -67,8 +67,7 @@ export default function MuiPage() {
             <h2 className="text-xl font-semibold mb-4">程式碼範例</h2>
             <pre className="overflow-x-auto text-sm">
               <code>{`import { useCountryList } from 'use-country-list-zh';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
+import { Autocomplete, TextField } from '@mui/material';
 
 function CountryAutocomplete() {
   const {

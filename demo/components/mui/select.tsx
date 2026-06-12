@@ -1,12 +1,15 @@
 "use client";
 
 import * as React from "react";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import ListSubheader from "@mui/material/ListSubheader";
-import Divider from "@mui/material/Divider";
+import {
+  FormControl,
+  InputLabel,
+  Select,
+  type SelectChangeEvent,
+  MenuItem,
+  ListSubheader,
+  Divider,
+} from "@mui/material";
 import { useCountryList } from "use-country-list-zh";
 
 export function BasicMuiSelect() {
