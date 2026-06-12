@@ -14,7 +14,7 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/src/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
@@ -40,7 +40,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "peerDependencies": {
     "react": ">= 16.8.0"
   },
