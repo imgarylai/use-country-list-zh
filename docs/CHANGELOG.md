@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.3...v1.1.4) (2026-06-12)
+
+### Bug Fixes
+
+- **deps:** update dependency @ant-design/icons to v6 ([320e304](https://github.com/imgarylai/use-country-list-zh/commit/320e30477209e12bf0ab34bebaa09ae2ee8c2014))
+- **deps:** update lucide monorepo to ^0.475.0 ([ad0355f](https://github.com/imgarylai/use-country-list-zh/commit/ad0355f3261ff3df51f295e75c85a7bb0b3d58fb))
+
 ## [1.1.3](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.2...v1.1.3) (2026-01-22)
 
 ### Bug Fixes
