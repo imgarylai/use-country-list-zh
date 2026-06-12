@@ -1,3 +1,9 @@
+## [1.1.6](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.5...v1.1.6) (2026-06-12)
+
+### Bug Fixes
+
+- compile declaration files to flat dist folder ([1dcafab](https://github.com/imgarylai/use-country-list-zh/commit/1dcafabf505f5134ed0b84641b1613ee918a1d1a))
+
 ## [1.1.5](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.4...v1.1.5) (2026-06-12)
 
 ### Bug Fixes
