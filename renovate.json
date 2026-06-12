@@ -19,6 +19,13 @@
       "automerge": true
     },
     {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "dependencies (non-major)",
+      "groupSlug": "deps-minor-patch",
+      "automerge": false
+    },
+    {
       "description": "Security updates - auto merge immediately",
       "matchPackageNames": ["*"],
       "isVulnerabilityAlert": true,
