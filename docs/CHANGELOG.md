@@ -1,3 +1,9 @@
+## [1.1.8](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.7...v1.1.8) (2026-06-19)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([5387dab](https://github.com/imgarylai/use-country-list-zh/commit/5387dabe789e9d3bc286f31c5985fe8101a9c2d1))
+
 ## [1.1.7](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.6...v1.1.7) (2026-06-16)
 
 ### Bug Fixes
