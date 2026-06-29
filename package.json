@@ -86,7 +86,7 @@
     "typescript"
   ],
   "engines": {
-    "node": ">=20.19.0",
+    "node": ">=20.19.1",
     "npm": ">=10.2.5"
   },
   "publishConfig": {
