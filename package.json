@@ -87,7 +87,7 @@
   ],
   "engines": {
     "node": ">=20.20.2",
-    "npm": ">=10.9.7"
+    "npm": ">=10.9.8"
   },
   "publishConfig": {
     "access": "public"
