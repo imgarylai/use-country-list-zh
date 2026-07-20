@@ -10,7 +10,14 @@
   "dependencyDashboard": true,
   "schedule": ["every weekend"],
   "automergeStrategy": "rebase",
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
   "packageRules": [
+    {
+      "description": "Do not chase engines (node/npm) minimums on every patch release",
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
     {
       "matchUpdateTypes": ["minor", "patch"],
       "matchDepTypes": ["devDependencies"],
