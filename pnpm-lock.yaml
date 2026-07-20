@@ -40,7 +40,7 @@ importers:
         version: 19.2.3(@types/react@19.2.17)
       '@vitejs/plugin-react':
         specifier: 6.0.3
-        version: 6.0.3(vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))
+        version: 6.0.3(vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))
       commitizen:
         specifier: ^4.3.1
         version: 4.3.2(@types/node@26.1.1)(typescript@6.0.3)
@@ -84,11 +84,11 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       vite:
-        specifier: 8.1.0
-        version: 8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
+        specifier: 8.1.1
+        version: 8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.3
-        version: 5.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))
+        version: 5.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))
 
 packages:
 
@@ -3451,8 +3451,8 @@ packages:
       vite:
         optional: true
 
-  vite@8.1.0:
-    resolution: {integrity: sha512-BuJcQK/56NQTWDGn4ABea3q4SSBdNPWwNZKTkkUpcMPnLoquSYH8llRtSUIgoL1KSCpHt5eghLShn50mH36y7Q==}
+  vite@8.1.1:
+    resolution: {integrity: sha512-X/05/cT+VITy2AeDc1der6smvGWWREtL4hPbPTaVbjSBuuWkmNOjR6HP3NzqcQA2nF6VHGUPaFRJyft/2AE9Kg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -4782,10 +4782,10 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
 
-  '@vitejs/plugin-react@6.0.3(vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))':
+  '@vitejs/plugin-react@6.0.3(vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
+      vite: 8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
 
   '@volar/language-core@2.4.28':
     dependencies:
@@ -7087,7 +7087,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-dts@1.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)):
+  unplugin-dts@1.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0
       '@volar/typescript': 2.4.28
@@ -7100,7 +7100,7 @@ snapshots:
       unplugin: 2.3.11
     optionalDependencies:
       rolldown: 1.1.5
-      vite: 8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
+      vite: 8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7159,11 +7159,11 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-dts@5.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)):
+  vite-plugin-dts@5.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)):
     dependencies:
-      unplugin-dts: 1.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))
+      unplugin-dts: 1.0.3(rolldown@1.1.5)(typescript@6.0.3)(vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0))
     optionalDependencies:
-      vite: 8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
+      vite: 8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -7173,7 +7173,7 @@ snapshots:
       - typescript
       - webpack
 
-  vite@8.1.0(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0):
+  vite@8.1.1(@types/node@26.1.1)(jiti@2.6.1)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
