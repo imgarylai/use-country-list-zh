@@ -47,12 +47,12 @@ use-country-list-zh/
 
 ```typescript
 const {
-  countries,      // Filtered country list
-  query,          // Current search query
-  setQuery,       // Update search query
-  selectedCountry,// Currently selected country
+  countries, // Filtered country list
+  query, // Current search query
+  setQuery, // Update search query
+  selectedCountry, // Currently selected country
   setSelectedCountry,
-  reset,          // Reset all state
+  reset, // Reset all state
 } = useCountryList(options);
 ```
 
@@ -60,22 +60,25 @@ const {
 
 ```typescript
 interface UseCountryListOptions {
-  showFlag?: boolean;        // Show flag emoji (default: true)
-  topList?: string[];        // ISO codes for top countries (e.g., ['TW', 'US'])
-  includeOnly?: string[];    // Only show these countries (ISO codes)
-  defaultSelected?: string;  // Default selected country (ISO code)
-  sortBy?: 'zh' | 'en' | 'zhuyin';  // Sort order (default: 'zh')
+  showFlag?: boolean; // Show flag emoji (default: true)
+  topList?: string[]; // ISO codes for top countries (e.g., ['TW', 'US'])
+  includeOnly?: string[]; // Only show these countries (ISO codes)
+  defaultSelected?: string; // Default selected country (ISO code)
+  sortBy?: 'zh' | 'en' | 'zhuyin'; // Sort order (default: 'zh')
 }
 ```
 
 ## Development
 
+This project uses **pnpm** (>= 10). The pnpm version is pinned via the
+`packageManager` field and managed by Corepack.
+
 ```bash
-npm install
-npm run dev      # Watch mode
-npm run build    # Production build
-npm run test     # Run tests
-npm run lint     # Lint check
+pnpm install
+pnpm run dev      # Watch mode
+pnpm run build    # Production build
+pnpm run test     # Run tests
+pnpm run lint     # Lint check
 ```
 
 ## Related Files

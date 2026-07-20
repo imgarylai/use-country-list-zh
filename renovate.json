@@ -14,8 +14,8 @@
   "prHourlyLimit": 2,
   "packageRules": [
     {
-      "description": "Do not chase engines (node/npm) minimums on every patch release",
-      "matchDepTypes": ["engines"],
+      "description": "Do not chase engines minimums or the pinned pnpm version on every release",
+      "matchDepTypes": ["engines", "packageManager"],
       "enabled": false
     },
     {
