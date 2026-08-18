@@ -6,7 +6,7 @@
 
 一個提供中文國家選擇器的 React Hook，支援英文輸入快速過濾功能。
 
-**[Live Demo](https://use-country-list-zh.vercel.app/)**
+**[線上 Demo](https://laigary.com/labs/use-country-list-zh)** — 試著打 `united`，美國跟英國會同時出現。
 
 ## 問題背景
 
@@ -299,7 +299,7 @@ function CountryForm() {
 }
 ```
 
-更多範例請參考 [Live Demo](https://use-country-list-zh.vercel.app/)。
+更多範例請參考[線上 Demo](https://laigary.com/labs/use-country-list-zh)。
 
 ## API
 
