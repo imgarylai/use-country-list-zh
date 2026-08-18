@@ -4,7 +4,7 @@
   "description": "A React hook for Chinese country selector with English input filtering support",
   "license": "MIT",
   "author": "Gary Lai",
-  "homepage": "https://github.com/imgarylai/use-country-list-zh#readme",
+  "homepage": "https://laigary.com/labs/use-country-list-zh",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imgarylai/use-country-list-zh.git"
