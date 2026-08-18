@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.11...v2.0.0) (2026-08-18)
+
+### Bug Fixes
+
+- **data:** correct 16 country names corrupted into 乍得 variants ([3859227](https://github.com/imgarylai/use-country-list-zh/commit/38592279e0ed100866aa1e5f9189e89a5f3bd826))
+
+### BREAKING CHANGES
+
+- **data:** nameZh changed for TD, CI, CW, GN, YE, GQ, GW, ER, SI,
+  SC, TT, TC, WF, PM, VC, GF. Consumers matching on the Chinese name must
+  update.
+
 ## [1.1.11](https://github.com/imgarylai/use-country-list-zh/compare/v1.1.10...v1.1.11) (2026-07-20)
 
 ### Bug Fixes
