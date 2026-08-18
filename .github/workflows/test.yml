@@ -3,11 +3,7 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'demo/**'
   pull_request:
-    paths-ignore:
-      - 'demo/**'
 
 concurrency:
   group: test-${{ github.workflow }}-${{ github.ref }}
